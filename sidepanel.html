@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Comment Exporter</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Social Comment Exporter</h2>
+    <p class="subtitle">Facebook | Instagram | Twitter (X)</p>
+
+    <div class="card status-card">
+      <div class="status-label">Estado:</div>
+      <div id="status-text" class="status-value status-waiting">Esperando...</div>
+    </div>
+
+    <div class="card metric-card">
+      <span class="metric-number" id="count-text">0</span>
+      <span class="metric-label">Comentarios capturados</span>
+    </div>
+
+    <div class="button-group">
+      <button id="btn-start" class="btn btn-primary">Extraer comentarios</button>
+      <button id="btn-stop" class="btn btn-danger" disabled>Detener</button>
+    </div>
+
+    <hr class="divider">
+
+    <div class="export-section">
+      <label for="format-select" class="form-label">Formato de exportación:</label>
+      <select id="format-select" class="form-control">
+        <option value="xlsx">Excel (.XLSX)</option>
+        <option value="csv">CSV (.CSV)</option>
+      </select>
+
+      <button id="btn-export" class="btn btn-success" disabled>Exportar resultados</button>
+    </div>
+  </div>
+
+  <script src="lib/xlsx.mini.min.js"></script>
+  <script src="export.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>
